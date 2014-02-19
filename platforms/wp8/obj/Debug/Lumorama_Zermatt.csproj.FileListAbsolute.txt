@@ -1,0 +1,14 @@
+Y:\platforms\wp8\Bin\Debug\ApplicationIcon.png
+Y:\platforms\wp8\Bin\Debug\Background.png
+Y:\platforms\wp8\Bin\Debug\mobi.koni.lumorama.dll
+Y:\platforms\wp8\Bin\Debug\mobi.koni.lumorama.pdb
+Y:\platforms\wp8\Bin\Debug\AppManifest.xaml
+Y:\platforms\wp8\Bin\Debug\Properties\WMAppManifest.xml
+Y:\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap
+Y:\platforms\wp8\obj\Debug\App.g.cs
+Y:\platforms\wp8\obj\Debug\cordovalib\CordovaView.g.cs
+Y:\platforms\wp8\obj\Debug\MainPage.g.cs
+Y:\platforms\wp8\obj\Debug\mobi.koni.lumorama.g.resources
+Y:\platforms\wp8\obj\Debug\mobi.koni.lumorama.dll
+Y:\platforms\wp8\obj\Debug\mobi.koni.lumorama.pdb
+Y:\platforms\wp8\obj\Debug\XapCacheFile.xml
