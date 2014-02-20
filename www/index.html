@@ -1,32 +1,13 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
 <head>
-<meta charset="utf-8" />
-<meta name="format-detection" content="telephone=no" />
-<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-<!-- <meta name="viewport" -->
-<!-- 	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Lumorama</title>
+<meta name="description" content="">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 <meta name="viewport"
-	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
-<link rel="stylesheet" type="text/css" href="css/index.css" />
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
 <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="apple-touch-icon" href="img/icon/apple-touch-icon-iphone.png" />
@@ -38,21 +19,227 @@
 <link rel="apple-touch-icon" sizes="144x144" href="img/icon/apple-touch-icon_144x144.png" />
 <link rel="apple-touch-icon" sizes="152x152" href="img/icon/apple-touch-icon_152x152.png" />
 
-<title>Lumorama</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.1.min.css">
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquery.mobile-1.4.1.min.js" type="text/javascript"></script>
+
+<script src="js/util.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var conf = false;
+	var callCosts = "";
+
+	function confirmBox(superama, phonenumber) {
+
+		if (superama) {
+			callCosts = "Das Superama betätigt alle 4 Lichter in faszinierenden Variationen (mit Tasten 1–9, Preis CHF 5.00/Minute)\n\nEs ist für einen guten Zweck. Du unterstützt die Bergführer und deren Familien bei Tod oder Invalidität durch Unfall.\n\nEine Anleitung findest du auf der Hilfe Seite.";
+		} else {
+			callCosts = "Dieser Anruf kostet ab Festnetz CHF 2.00, darin inbegriffen sind 60 Sekunden Lichtspiel, danach CHF 2.00/Minute.\n\nEs ist für einen guten Zweck. Du unterstützt die Bergführer und deren Familien bei Tod oder Invalidität durch Unfall.\n\nEine Anleitung findest du auf der Hilfe Seite.";
+		}
+
+		if (isWindowsPhone()) {
+			conf = confirm(callCosts);
+		} else {
+			conf = confirmIframe(callCosts);
+		}
+
+		if (conf) {
+			document.location.href = "tel:" + phonenumber;
+		} else {
+			// Do nothing!
+		}
+	}
+
+	// for non Windows Phones to remove the title in the confirm (alert) box
+	function confirmIframe(callCosts) {
+		var iframe = document.createElement("iframe");
+		iframe.setAttribute("src", 'data:text/plain,');
+		document.documentElement.appendChild(iframe);
+		conf = window.frames[0].window.confirm(callCosts);
+		iframe.parentNode.removeChild(iframe);
+		return conf;
+	}
+</script>
+<style type="text/css">
+<!--
+.ui-page {
+	background: url(img/lumorama_panorama.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#logo_image {
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+
+td {
+	background-color: #333333;
+}
+
+table {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+-->
+</style>
+
 </head>
 <body>
-	<div class="app">
-		<h1>Lumorama Zermatt</h1>
-		<div id="deviceready" class="blink">
-			<!--                 <p class="event listening">Connecting to Device</p> -->
-			<!--                 <p class="event received">Device is Ready</p> -->
+
+	<!-- ------------------------------------------------------------  -->
+	<!-- Main Page --------------------------------------------------  -->
+	<!-- ------------------------------------------------------------  -->
+	<div data-role="page" id="home" data-theme="b">
+
+		<header data-role="header" data-position="fixed">
+<!-- 			<h1>Lumorama</h1> -->
+		</header>
+
+		<div data-role="content">
+
+			<a onclick="confirmBox(false, '0901392011');" href="#"
+				class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-phone" style="text-align: left">0901 3920 11
+				Schwarzsee</a>
+			<!--  -->
+			<a onclick="confirmBox(false, '0901392022');" href="#"
+				class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-phone" style="text-align: left">0901 3920 22
+				Trockener Steg</a>
+			<!--  -->
+			<a onclick="confirmBox(false, '0901392033');" href="#"
+				class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-phone" style="text-align: left">0901 3920 33
+				Rothorn</a>
+			<!--  -->
+			<a onclick="confirmBox(false, '0901392044');" href="#"
+				class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-phone" style="text-align: left">0901 3920 44
+				Klein Matterhorn (funktioniert gegenwärtig nicht)</a>
+			<!--  -->
+			<a onclick="confirmBox(true, '0901392055');" href="#"
+				class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-phone" style="text-align: left">0901 3920 55
+				Superama</a>
+
 		</div>
+
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+					<li><a href="#help" data-icon="bullets">Hilfe</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</nav>
+		</footer>
+
 	</div>
-	<script type="text/javascript" src="cordova.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript">
-		//app.initialize();
-		document.location.href = 'home.html';
-	</script>
+
+	<!-- ------------------------------------------------------------  -->
+	<!-- Help Page --------------------------------------------------  -->
+	<!-- ------------------------------------------------------------  -->
+	<div data-role="page" id="help" data-theme="b">
+
+		<header data-role="header" data-position="fixed">
+<!-- 			<h1>Lumorama</h1> -->
+		</header>
+
+		<div data-role="content">
+			<table style="width: 100% color: white; background-color: rgba(#2757A1, 0.5);" cellspacing="10" cellpadding="10">
+				<tr>
+					<td>So läuft das Lumorama.</td>
+				</tr>
+				<tr>
+					<td>Das Lumorama ist ein Lichtspiel am Abendhimmel von Zermatt (Schweiz). Verwenden sie diese App nur in
+						Zermatt mit Blick auf die Lichter des Lumoramas.</td>
+				</tr>
+				<tr>
+					<td>1. Wählen Sie die Lichtquelle mit<br> 0901 3920 11 für Schwarzsee<br> 0901 3920 22 für Trockener
+						Steg<br> 0901 3920 33 für Rothorn<br> 0901 3920 44 für Kleinmatterhorn (funktioniert gegenwärtig nicht)<br>
+						0901 3920 55 Superama
+					</td>
+				</tr>
+				<tr>
+					<td>2. Mit den Tasten 1-9 Ihres Telefons wechseln Sie die Farbe des ausgestrahlten Lichts. Die Standardfarbe
+						ist blau.<br> <br>
+						<div align="center">
+							<img alt="Farbtafel" src="img/farbtafel-d-b200.jpg">
+						</div> <br> <br> Solange Sie die Verbindung nicht unterbrechen, bleibt die zuletzt von Ihnen gewählte Farbe
+						aktiv. Die maximale Verbindungsdauer ist 15 Minuten. Wenn Sie aufhängen, oder wenn die Maximalzeit erreicht ist,
+						scheint der Leuchter wieder in der Standardfarbe blau.
+					</td>
+				</tr>
+				<tr>
+					<td>3. Jeder Anruf vom Fixnetz wird Ihnen mit CHF 2.00 in Rechnung gestellt. Er gibt Anrecht auf 60 Sekunden
+						Lichtspiel. Jede weitere Minute kotet CHF 2.00. Anrufe vom Mobil aus unterliegen darüber der Taxe Ihres
+						Betreibers. Der Tarif für das Lichtspiel Superama, das alle vier Lichter gleichzeitig betätigt, ist CHF 5.00 pro
+						Minute.</td>
+				</tr>
+				<tr>
+					<td>4. Neben dem Vergnügungsaspekt des Lumoramas dient dieses Spiel einem edlen Zweck. Das ganze Einkommen
+						jedes Anrufes äufnet den Fonds für Hilfe an Zermatter Bergführer und deren Familien bei Tod oder Invalidität durch
+						Unfall. Dieser Fonds wird paritätisch verwaltet von den Präsidenten des Bergführervereins Zermatt und des
+						Yeti-Clubs Zermatt sowie eine durch diese beiden gewählte Drittperson.</td>
+				</tr>
+				<tr>
+					<td>Erfahren Sie mehr über diese Vereine unter www.yeticlub.ch und www.alpincenter-zermatt.ch.</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#help" data-icon="bullets" class="ui-btn-active ui-state-persist">Hilfe</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</nav>
+		</footer>
+
+	</div>
+
+	<!-- ------------------------------------------------------------  -->
+	<!-- Info Page --------------------------------------------------  -->
+	<!-- ------------------------------------------------------------  -->
+
+	<div data-role="page" id="info" data-theme="b">
+
+		<header data-role="header" data-position="fixed">
+<!-- 			<h1>Lumorama</h1> -->
+		</header>
+
+		<div data-role="content" align="center">
+			<table style="width: 100% color: white; background-color: rgba(#2757A1, 0.5);" cellspacing="10" cellpadding="10">
+				<tr>
+					<td>&copy; 2014 by Koni</td>
+				</tr>
+				<tr>
+					<td>Diese App ist in meinen Ferien in Zermatt entstanden. Das Lumorama hat mich auf Anhieb fasziniert und der
+						edle Zweck ist doch unterstützenswert - oder?</td>
+				</tr>
+				<tr>
+					<td>Der Ersteller dieser App hat keinerlei Verbindung zum Yeti-Club oder zum Bergführerverein Zermatt.</td>
+				</tr>
+				<tr>
+					<td>Um mehr über das Lumorama und die Vereine dahinter zu erfahren besuchen sie die folgenden Internet-Seiten:<br>
+						<br>www.lumorama.ch<br>www.yeticlub.ch<br>www.alpincenter-zermatt.ch
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<footer data-role="footer" data-position="fixed">
+			<nav data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#help" data-icon="bullets">Hilfe</a></li>
+					<li><a href="#info" data-icon="info" class="ui-btn-active ui-state-persist">Info</a></li>
+				</ul>
+			</nav>
+		</footer>
+
+	</div>
 </body>
 </html>

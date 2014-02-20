@@ -1,14 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment AppPlatformVersion="8.0" xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment">
-  <DefaultLanguage code="en-US" xmlns="" />
+  <DefaultLanguage code="de-CH" xmlns="" />
   <Languages xmlns="">
     <Language code="en-US" />
+    <Language code="de" />
+    <Language code="de-AT" />
+    <Language code="de-DE" />
+    <Language code="de-LI" />
+    <Language code="de-LU" />
+    <Language code="de-CH" />
   </Languages>
-  <App Author="Lumorama Zermatt author" BitsPerPixel="32" Description="Apache Cordova for Windows Phone" Genre="apps.normal" ProductID="{F861C350-0B03-4B59-8183-908F2AD718A8}" Publisher="Lumorama Zermatt" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="Lumorama Zermatt" Version="1.0.0" xmlns="">
+  <App Author="Koni" BitsPerPixel="32" Description="Lichtspiel am Zermatter Nacht-Himmel." Genre="apps.normal" ProductID="{F861C350-0B03-4B59-8183-908F2AD718A8}" Publisher="" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="Lumorama Zermatt" Version="1.0.0" xmlns="">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
       <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_PHONEDIALER" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
@@ -23,11 +30,11 @@
           <BackContent />
           <BackBackgroundImageURI />
           <BackTitle />
-          <LargeBackgroundImageURI />
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">windows_store_tile_310x150.png</LargeBackgroundImageURI>
           <LargeBackContent />
-          <LargeBackBackgroundImageURI />
+          <LargeBackBackgroundImageURI IsRelative="true" IsResource="false" />
           <DeviceLockImageURI />
-          <HasLarge>false</HasLarge>
+          <HasLarge>True</HasLarge>
         </TemplateFlip>
       </PrimaryToken>
     </Tokens>

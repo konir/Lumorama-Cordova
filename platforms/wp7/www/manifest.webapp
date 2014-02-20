@@ -1,0 +1,22 @@
+{
+    "version":"0.1",
+        "name": "Lumorama Zermatt",
+    "description": "Am Nachthimmel können Sie mit Ihrem Telefon die Farben derLichter am Zermatter Horizont ändern. Wir wünschen Ihnen viel Spass bei diesem Lichtspiel, das einem edlen Zweck dientMit SRFpods können sie alle Video Podcasts des Schweizer Fernsehens SRF sehen. SRFpods shows all video podcasts of the swiss national TV broadcast station SRF.",
+    "launch_path": "/index.html",
+        "fullscreen": "false",
+    "icons": {
+        "16": "http://koni.mobi/lumorama/img/iconFFOS/Lumorama16x16.png",
+        "32": "http://koni.mobi/lumorama/img/iconFFOS/Lumorama32x32.png",
+        "48": "http://koni.mobi/lumorama/img/iconFFOS/Lumorama48x48.png",
+        "60": "http://koni.mobi/lumorama/img/iconFFOS/Lumorama60x60.png",
+        "90": "http://koni.mobi/lumorama/img/iconFFOS/Lumorama90x90.png",
+        "120": "http://koni.mobi/lumorama/img/iconFFOS/Lumorama120x120.png",
+        "128": "http://koni.mobi/lumorama/img/iconFFOS/Lumorama128x128.png",
+        "256": "http://koni.mobi/lumorama/img/iconFFOS/Lumorama256x256.png"
+    },
+        "developer": {
+        "name": "Koni",
+        "url": "http://koni.mobi/lumorama"
+    },
+    "default_locale": "de"
+}

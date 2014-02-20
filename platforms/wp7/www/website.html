@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- stop zoom -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Koni">
+  <link rel="shortcut icon" href="./ico/favicon.ico">
+  <link rel="apple-touch-icon" href="ico/apple-touch-icon-iphone.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="ico/localtv-57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="ico/localtv-72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="ico/localtv-76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="ico/localtv-114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="ico/localtv-120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="ico/localtv-144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="ico/localtv-152.png" />
+
+<title>Lumorama</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js" type="text/javascript"></script>
+<script src="js/util.js" type="text/javascript"></script>
+
+<style>
+ .my_icon_wrapper {
+        /*float: left; 
+        text-align: center;*/ 
+        vertical-align: middle; 
+        height: 32px;
+}
+
+.ui-li-thumb, .ui-li-icon {
+    position:absolute; 
+    top:0; 
+    bottom:0; 
+    left:10px; 
+    margin:auto; 
+    max-height:70px; 
+    max-width:70px;
+}
+</style>
+</head>
+<body onload="checkInternetConnection();">
+
+<!--------------------------------------------------------------------------------------------------------->
+<!-- Webpage PAGE -->
+<!--------------------------------------------------------------------------------------------------------->
+    <div data-role="page" id="web-page" data-title="Lumorama" data-theme="b">
+
+        <!---------------------------------------------------------------------------------------------->
+        <!-- HEADER // link | headline -->
+        <!---------------------------------------------------------------------------------------------->
+        <div data-role="header" data-position="fixed">
+
+            <h1>Lumorama</h1>
+            <a href="#" data-icon="back" data-iconpos="left" data-rel="back">Zur&uuml;ck</a>
+
+        </div><!-- /header -->
+
+        <!---------------------------------------------------------------------------------------------->
+        <!-- CONTENT -->
+        <!---------------------------------------------------------------------------------------------->
+        <div data-role="content">
+
+			<script type="text/javascript">
+				var streamURL = gup('url');
+				//var w=window.innerWidth-10;
+				//var h=window.innerHeight-70;
+				var w='100%';
+				var h='100%';
+				document.write('<iframe scrolling="yes" frameborder="0" allowtransparency="true" border="0" width="'+w+'" height="'+h+'" src="'+streamURL+'"></iframe>');
+			</script>
+		
+        </div><!-- /content -->
+
+    </div><!-- /page -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+X:\platforms\wp7\Bin\Release\ApplicationIcon.png
+X:\platforms\wp7\Bin\Release\Background.png
+X:\platforms\wp7\Bin\Release\mobi.koni.lumorama.dll
+X:\platforms\wp7\Bin\Release\mobi.koni.lumorama.pdb
+X:\platforms\wp7\Bin\Release\AppManifest.xaml
+X:\platforms\wp7\Bin\Release\mobi.koni.lumorama.xap
+X:\platforms\wp7\obj\Release\Lumorama_Zermatt.csprojResolveAssemblyReference.cache
+X:\platforms\wp7\obj\Release\App.g.cs
+X:\platforms\wp7\obj\Release\MainPage.g.cs
+X:\platforms\wp7\obj\Release\cordovalib\CordovaView.g.cs
+X:\platforms\wp7\obj\Release\mobi.koni.lumorama.g.resources
+X:\platforms\wp7\obj\Release\mobi.koni.lumorama.dll
+X:\platforms\wp7\obj\Release\mobi.koni.lumorama.pdb
+X:\platforms\wp7\obj\Release\XapCacheFile.xml
