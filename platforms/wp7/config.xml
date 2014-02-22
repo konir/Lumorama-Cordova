@@ -5,4 +5,7 @@
     <author email="apps@koni.mobi" href="http://koni.mobi">Koni</author>
     <content src="index.html" />
     <access origin="*" />
+    <feature name="Notification">
+        <param name="wp-package" value="Notification" />
+    </feature>
 </widget>

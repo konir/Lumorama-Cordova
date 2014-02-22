@@ -1,7 +1,7 @@
 {
     "version":"0.1",
         "name": "Lumorama Zermatt",
-    "description": "Am Nachthimmel können Sie mit Ihrem Telefon die Farben derLichter am Zermatter Horizont ändern. Wir wünschen Ihnen viel Spass bei diesem Lichtspiel, das einem edlen Zweck dientMit SRFpods können sie alle Video Podcasts des Schweizer Fernsehens SRF sehen. SRFpods shows all video podcasts of the swiss national TV broadcast station SRF.",
+    "description": "Am Nachthimmel können Sie mit Ihrem Telefon die Farben derLichter am Zermatter Horizont ändern. Wir wünschen Ihnen viel Spass bei diesem Lichtspiel, das einem edlen Zweck dient.",
     "launch_path": "/index.html",
         "fullscreen": "false",
     "icons": {

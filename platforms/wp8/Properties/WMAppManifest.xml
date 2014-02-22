@@ -2,7 +2,6 @@
 <Deployment AppPlatformVersion="8.0" xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment">
     <DefaultLanguage code="de-CH" xmlns="" />
     <Languages xmlns="">
-        <Language code="en-US" />
         <Language code="de" />
         <Language code="de-AT" />
         <Language code="de-DE" />
@@ -10,11 +9,10 @@
         <Language code="de-LU" />
         <Language code="de-CH" />
     </Languages>
-    <App Author="Koni" BitsPerPixel="32" Description="Lichtspiel am Zermatter Nacht-Himmel." Genre="apps.normal" ProductID="{F861C350-0B03-4B59-8183-908F2AD718A8}" Publisher="" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="Lumorama Zermatt" Version="1.0.0" xmlns="">
+    <App Author="Koni" BitsPerPixel="32" Description="Lichtspiel am Zermatter Nacht-Himmel." Genre="apps.normal" ProductID="{F861C350-0B03-4B59-8183-908F2AD718A8}" Publisher="Koni" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="Lumorama Zermatt" Version="1.0.0" xmlns="">
         <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
         <Capabilities>
             <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
-            <Capability Name="ID_CAP_NETWORKING" />
             <Capability Name="ID_CAP_PHONEDIALER" />
         </Capabilities>
         <Tasks>

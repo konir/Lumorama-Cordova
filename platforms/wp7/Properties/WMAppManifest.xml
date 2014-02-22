@@ -1,23 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Deployment AppPlatformVersion="7.1" xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment">
-  <App Author="Koni" BitsPerPixel="32" Description="Am Nachthimmel können Sie mit Ihrem Telefon die Farben der Lichter am Zermatter Horizont ändern. Wir wünschen Ihnen viel Spass bei diesem Lichtspiel, das einem edlen Zweck dient." Genre="apps.normal" ProductID="{4526F029-8A9D-4E9F-A666-182861AE2FC4}" Publisher="Koni" RuntimeType="Silverlight" Title="Lumorama Zermatt" Version="1.0.0" xmlns="">
-    <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
-    <Capabilities>
-      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
-      <Capability Name="ID_CAP_NETWORKING" />
-      <Capability Name="ID_CAP_PHONEDIALER" />
-    </Capabilities>
-    <Tasks>
-      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
-    </Tasks>
-    <Tokens>
-      <PrimaryToken TaskName="_default" TokenID="Lumorama ZermattToken">
-        <TemplateType5>
-          <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
-          <Count>0</Count>
-          <Title>Lumorama Zermatt</Title>
-        </TemplateType5>
-      </PrimaryToken>
-    </Tokens>
-  </App>
+    <App Author="Koni" BitsPerPixel="32" Description="Am Nachthimmel können Sie mit Ihrem Telefon die Farben der Lichter am Zermatter Horizont ändern. Wir wünschen Ihnen viel Spass bei diesem Lichtspiel, das einem edlen Zweck dient." Genre="apps.normal" ProductID="{4526F029-8A9D-4E9F-A666-182861AE2FC4}" Publisher="Koni" RuntimeType="Silverlight" Title="Lumorama Zermatt" Version="1.0.0" xmlns="">
+        <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
+        <Capabilities>
+            <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+            <Capability Name="ID_CAP_NETWORKING" />
+            <Capability Name="ID_CAP_PHONEDIALER" />
+        </Capabilities>
+        <Tasks>
+            <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+        </Tasks>
+        <Tokens>
+            <PrimaryToken TaskName="_default" TokenID="Lumorama ZermattToken">
+                <TemplateType5>
+                    <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+                    <Count>0</Count>
+                    <Title>Lumorama Zermatt</Title>
+                </TemplateType5>
+            </PrimaryToken>
+        </Tokens>
+    </App>
 </Deployment>

@@ -1,0 +1,5 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="mobi.koni.lumorama" EntryPointType="mobi.koni.lumorama.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="mobi.koni.lumorama" Source="mobi.koni.lumorama.dll" />
+  </Deployment.Parts>
+</Deployment>
