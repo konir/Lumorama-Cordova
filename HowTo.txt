@@ -4,6 +4,10 @@ sudo -s koni --> Admin in console
 
 npm install -g cordova
 
+Uninstall:
+----------
+sudo npm uninstall cordova -g
+
 
 Create new project
 ------------------
@@ -32,7 +36,7 @@ hello/
 
 Add plattform
 -------------
-cordova platform add ios|android|blackberry10
+cordova platform add ios|android|wp8|wp7|blackberry10
  
  
 Build specific platform
